@@ -1,0 +1,20 @@
+# Site settings
+author: Veronica Lopez
+title: 
+header-img: img/home-bg.png
+email: nicaa0695@gmail.com
+copyright_name: Veronica Lopez
+description: > # this means to ignore newlines until "baseurl:"
+  
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  nicaa0695
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
