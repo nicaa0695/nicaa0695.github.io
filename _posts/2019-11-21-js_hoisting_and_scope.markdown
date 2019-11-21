@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JS Hoisting and Scope"
-date:       2019-11-21 22:04:24 +0000
+date:       2019-11-21 17:04:25 -0500
 permalink:  js_hoisting_and_scope
 ---
 
@@ -16,7 +16,7 @@ console.log(a)
 
 var a = 5;
 ```
-5? Wrong. Think we will get an error? Wrong. Undefined. Yes! During the complie phase, it reserves memory block for the variable. The variable isn't assigned any value so the value is 'undefined' by default. After this hoisting is done, the execution phase begins, on the first line it sees the variable 'a', which is undefined right now, then 'a' is reassigned the value of 5. This is just a small example but if you're struggling with this, heres a short video for review: [hoisting video](http://https://www.youtube.com/watch?v=AplVrrwY1TI&t=337s) or a some documentation outside of Learn if you're new to the concept of hoisting: [hoisting documentation](http://https://www.w3schools.com/js/js_hoisting.asp)
+5? Wrong. Think we will get an error? Wrong. Undefined. Yes! During the complie phase, it reserves memory block for the variable. The variable isn't assigned any value so the value is 'undefined' by default. After this hoisting is done, the execution phase begins, on the first line it sees the variable 'a', which is undefined right now, then 'a' is reassigned the value of 5. This is just a small example but if you're struggling with this, heres a short video for review: [hoisting video](http://https://www.youtube.com/watch?v=AplVrrwY1TI&t=337s) or a some documentation outside of Learn if you're new to the concept of hoisting: [hoisting documentation](http://http://www.w3schools.com/js/js_hoisting.asp)
 
 # Scope
 Scope makes a little more sense to me than hoisting and here are a couple of things to remember. 
