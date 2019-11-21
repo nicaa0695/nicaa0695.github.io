@@ -16,7 +16,7 @@ console.log(a)
 
 var a = 5;
 ```
-5? Wrong. Think we will get an error? Wrong. Undefined. Yes! During the complie phase, it reserves memory block for the variable. The variable isn't assigned any value so the value is 'undefined' by default. After this hoisting is done, the execution phase begins, on the first line it sees the variable 'a', which is undefined right now, then 'a' is reassigned the value of 5. This is just a small example but if you're struggling with this, heres a short video for review: [hoisting video](http://https://www.youtube.com/watch?v=AplVrrwY1TI&t=337s) or a some documentation outside of Learn if you're new to the concept of hoisting: [hoisting documentation](http://http://www.w3schools.com/js/js_hoisting.asp)
+5? Wrong. Think we will get an error? Wrong. Undefined. Yes! During the complie phase, it reserves memory block for the variable. The variable isn't assigned any value so the value is 'undefined' by default. After this hoisting is done, the execution phase begins, on the first line it sees the variable 'a', which is undefined right now, then 'a' is reassigned the value of 5. This is just a small example but if you're struggling with this, heres a short video for review: [hoisting video](https://www.youtube.com/watch?v=AplVrrwY1TI&t=337s) or a some documentation outside of Learn if you're new to the concept of hoisting: [hoisting documentation](http://www.w3schools.com/js/js_hoisting.asp)
 
 # Scope
 Scope makes a little more sense to me than hoisting and here are a couple of things to remember. 
@@ -33,5 +33,5 @@ console.log(fruit);       //error: fruit is not defined
 ```
 3.) Inner scopes can access outer scopes' variables.
 4.) You can go up the scope chain but not down.
-Here is a helpful artictle to look over if you're struggling with scope: [scope article](http://https://medium.com/datadriveninvestor/still-confused-in-js-scopes-f7dae62c16ee)
+Here is a helpful artictle to look over if you're struggling with scope: [scope article](https://medium.com/datadriveninvestor/still-confused-in-js-scopes-f7dae62c16ee)
 
