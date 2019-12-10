@@ -1,11 +1,11 @@
 # Site settings
 author: Veronica Lopez
-title: 
+title: Veronica Lopez 
 header-img: img/home-bg.png
 email: nicaa0695@gmail.com
 copyright_name: Veronica Lopez
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Coding
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  nicaa0695
