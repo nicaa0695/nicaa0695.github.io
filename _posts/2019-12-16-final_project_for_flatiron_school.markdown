@@ -25,10 +25,10 @@ let store = createStore(destinationReducer, composeEnhancers(applyMiddleware(thu
 I want to list a few things that helped get me through building this project.
 1. React/Redux dev tools and debugger; are your friends!
 2. Short YouTube videos explaing anything I didn't quite understand. (because I learn better with visuals)
-3. Re-reading Read-Me's (say that 10 times fast) or any hepful articles you fing on the web.
+3. Re-reading Read-Me's (say that 10 times fast) or any hepful articles you find on the web.
 4. Be patient with yourself, take breaks when needed.
-5. [Article for Understanding State in React](https://medium.com/the-andela-way/understanding-the-fundamentals-of-state-in-react-79c711be677f)
-6. [Article for Props and State](https://medium.com/@decode2018/props-vs-state-react-64fcf6c55886)
+5. [Click Here for an Article on Understanding State in React](https://medium.com/the-andela-way/understanding-the-fundamentals-of-state-in-react-79c711be677f)
+6. [Click Here for an Article on Props and State](https://medium.com/@decode2018/props-vs-state-react-64fcf6c55886)
 
 I did more styling on this project than on previous projects. CSS is not the easiest for me but it sure makes a huge difference when trying to show off your project so I decided to work harder at this, this time around. Simple google searches when I got stuck were ultimately what saved me, especially when I wanted something to look a certain way(before I could move on because I'm a little crazy).
 
