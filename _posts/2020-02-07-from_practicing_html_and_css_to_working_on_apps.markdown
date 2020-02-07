@@ -29,4 +29,7 @@ Just for fun, today I started building a real estate app that will be a Zillow c
 
 ![](https://media.makeameme.org/created/lets-write-some-5bb465.jpg)
 
+Peace,
+Nica
+
 
