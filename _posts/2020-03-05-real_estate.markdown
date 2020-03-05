@@ -32,6 +32,10 @@ Finally, I used the devise gem to set up the user accounts by putting `gem 'devi
 
 Sincle I started coding, I realized one of my struggles was remembering what commands you should run next while building an app, and exactly what certain commands do, such as: `rails g scaffold`, `rails g model`, or `rails g controller`. I found that the best way to familiarize yourself with these commands is to read the [Rails Guides](https://guides.rubyonrails.org/command_line.html), and after you run these commands, go through your app and see what files these commands actually created for you. They are really helpful and definitely speed up the app-building process!  For my next blog post, I will most likely continue my process for building this app and go into more detail about how the MVC structure works together to display what the user sees when the visit a site. 
 
+Peace,
+
+Nica
+
 Sources: 
 
 [Rails Guides](https://guides.rubyonrails.org/command_line.html)
