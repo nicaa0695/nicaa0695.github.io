@@ -54,7 +54,7 @@ The View component contains things like HTML, CSS, JSON, etc. The view reads wha
  
     `<%= form.label :address %>`
 		
-   ` <%= form.text_field :address %>`
+    `<%= form.text_field :address %>`
 	 
   `</div>`
 
@@ -68,7 +68,7 @@ The View component contains things like HTML, CSS, JSON, etc. The view reads wha
  
  `<% end %>`
  
- I had to spend some extra time really getting to know this pattern and I'm glad I did because the more I practice coding and building apps, the easier each one seems to be. Otherwise, everything would be so unorganized and we probably wouldn't enjoy coding as much as we do now. Even though software development is all about problem solving and mostly banging our heads against the wall, it's nice to have systems like this to help us focus on solving those problems, building apps quickly, and increasing productivity. Cheers to learning, growning, and coding!
+I had to spend some extra time really getting to know this pattern and I'm glad I did because the more I practice coding and building apps, the easier each one seems to be. Otherwise, everything would be so unorganized and we probably wouldn't enjoy coding as much as we do now. Even though software development is all about problem solving and mostly banging our heads against the wall, it's nice to have systems like this to help us focus on solving those problems, building apps quickly, and increasing productivity. Cheers to learning, growning, and coding!
  
  ![](https://www.salesforce.org/wp-content/uploads/2016/03/Girls-Who-Code.png)
  
