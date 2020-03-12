@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "The MVC Structure & My Real Estate App"
-date:       2020-03-12 21:01:40 +0000
+date:       2020-03-12 17:01:41 -0400
 permalink:  the_mvc_structure_and_my_real_estate_app
 ---
 
 
-In my last post, [Real Estate](https://nicaa0695.github.io/real_estate), I go over how I started building my real estate app. Since then, I've worked on it more and I've mostly been adding CSS, bootstrap, and tweaking forms. I still have a ways to go but I'm happy with what I've got so far. 
+In my last post, [Real Estate](https://nicaa0695.github.io/real_estate), I go over how I started building my real estate app. Since then, I've worked on more and I've mostly been adding CSS, bootstrap, and tweaking forms. I still have a ways to go but I'm happy with what I've got so far. 
 
 While I was at Flatiron, I remember wishing time would slow down because we had so much to learn. At times, I would inevitably just have to make a few extra hours to focus on concepts I didn't quite grasp all the way. One of them was truly understanding how the MVC (Model, View, Controller) structure works. It's so important to understand it because once you do, building apps becomes much easier. 
 
@@ -29,46 +29,48 @@ The Controller component interacts with both the model and the view. It interpre
 `class PropertiesController < ApplicationController`
 
  ` before_action :set_property, only: [:show, :edit, :update, :destroy]`
+ 
  ` before_action :authenticate_account!, only: [:new, :create, :destroy]`
 
   `def index`
 	
-    `@properties = Property.all`
+  `@properties = Property.all`
 		
   `end`
 
- ` def new`
+  `def new`
  
-   `@property = Property.new`
+  `@property = Property.new`
 	 
   `end`
 	
-`  end`
+  ` end`
 
 The View component contains things like HTML, CSS, JSON, etc. The view reads what it recieves from the controller but avoids getting involved with the logic. The show view generates the HTML which is what the user actually sees on their screen once everything is done. Here's an example of what a view might look like, in this case, a form for the user to fill out: 
 
 `<%= form_with(model: property, local: true) do |form| %>`
+
   `<% render "layouts/validation", item: @property %>`
 
  `<div class="field">`
  
-    `<%= form.label :address %>`
+  `<%= form.label :address %>`
 		
-    `<%= form.text_field :address %>`
+  `<%= form.text_field :address %>`
 	 
   `</div>`
 
- ` <div class="field">`
+ `<div class="field">`
  
-    `<%= form.label :price %>`
+  `<%= form.label :price %>`
 		
-    `<%= form.number_field :price %>`
+  `<%= form.number_field :price %>`
 		
- ` </div>`
+ `</div>`
  
  `<% end %>`
  
-I had to spend some extra time really getting to know this pattern and I'm glad I did because the more I practice coding and building apps, the easier each one seems to be. Otherwise, everything would be so unorganized and we probably wouldn't enjoy coding as much as we do now. Even though software development is all about problem solving and mostly banging our heads against the wall, it's nice to have systems like this to help us focus on solving those problems, building apps quickly, and increasing productivity. Cheers to learning, growing, and coding!
+ I had to spend some extra time really getting to know this pattern and I'm glad I did because the more I practice coding and building apps, the easier each one seems to be. Otherwise, everything would be so unorganized and we probably wouldn't enjoy coding as much as we do now. Even though software development is all about problem solving and mostly banging our heads against the wall, it's nice to have systems like this to help us focus on solving those problems, building apps quickly, and increasing productivity. Cheers to learning, growning, and coding!
  
  ![](https://www.salesforce.org/wp-content/uploads/2016/03/Girls-Who-Code.png)
  
