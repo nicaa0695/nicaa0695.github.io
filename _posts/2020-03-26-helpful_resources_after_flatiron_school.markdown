@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Helpful Resources After Flatiron School"
-date:       2020-03-26 18:27:11 +0000
+date:       2020-03-26 14:27:12 -0400
 permalink:  helpful_resources_after_flatiron_school
 ---
 
