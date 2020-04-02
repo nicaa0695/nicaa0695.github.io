@@ -12,7 +12,7 @@ In last weeks blog, I talked about how this weeks post would be about the issue 
 
 Just kidding.
 
-So anyways, I will cover deploying the app with Heroku in one my upcoming blogs. For now, I wanted to talk a little bit about obect orientation (OO) in general and then go into Object Oriented Ruby. When learning to code, I think it not only important but also interesting to understand how computer programming and OO came to be. I will briefly summarize what I learned about OO at Flatiron and share some resources that you can read to further your understanding. In 1969, the founder of Xerox, Joseph Wilson decided to open up a separate reaserch center in Silicon Valley called Xerox Palo Alto Reasearch Center (XPARC) because there were other huge companies there such as IBM and Intel. He hired Adele Goldberg and Alan Kay and they go on to invent the following: 
+So anyways, I will cover deploying the app with Heroku in one my upcoming blogs. For now, I wanted to talk a little bit about obect orientation (OO) in general and then go into Object Oriented Ruby. When learning to code, I think it's not only important but also interesting to understand how computer programming and OO came to be. I will briefly summarize what I learned about OO at Flatiron and share some resources that you can read to further your understanding. In 1969, the founder of Xerox, Joseph Wilson decided to open up a separate reaserch center in Silicon Valley called Xerox Palo Alto Reasearch Center (XPARC) because there were other huge companies there such as IBM and Intel. He hired Adele Goldberg and Alan Kay and they go on to invent the following: 
 * Object Oriented Programming 
 * Desktop Computer 
 * Laptop Computer
