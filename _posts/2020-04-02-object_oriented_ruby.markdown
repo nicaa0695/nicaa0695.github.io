@@ -6,11 +6,11 @@ permalink:  object_oriented_ruby
 ---
 
 
-In last weeks blog, [](https://nicaa0695.github.io/helpful_resources_after_flatiron_school), I talked about how this weeks post would be about the issue with my login system for my Real Estate app and my process for deploying the app with Heroku. However, I didn't have time to complete my project as planned. We just purhased a new home and we were planning on moving towards the end of April but there were some bumps in the road and now we are having to move sooner which is not ideal considering the pandemic and the stay-at-home orders but we really don't have a choice. We didn't hire any movers because we don't want to risk the spread of COVID-19 so it's more exhausting and taking a little longer than we anticipated. Oh wait, I have an idea: 
+In last weeks blog, I talked about how this weeks post would be about the issue with my login system for my Real Estate app and my process for deploying the app with Heroku. However, I didn't have time to complete my project as planned. We just purhased a new home and we were planning on moving towards the end of April but there were some bumps in the road and now we are having to move sooner which is not ideal considering the pandemic and the stay-at-home orders but we really don't have a choice. We didn't hire any movers because we don't want to risk the spread of COVID-19 so it's more exhausting and taking a little longer than we anticipated. Oh wait, I have an idea: 
 
 ![](https://i.pinimg.com/736x/a3/4f/4f/a34f4fec31f3d074146a6bec6c1f89d5.jpg)
 
-Just kidding. <img src="https://pic.sopili.net/pub/emoji/twitter/2/72x72/1f605.png" width=20 height=20><img src="https://pic.sopili.net/pub/emoji/twitter/2/72x72/1f61c.png" width=20 height=20>
+Just kidding.
 
 So anyways, I will cover deploying the app with Heroku in one my upcoming blogs. For now, I wanted to talk a little bit about obect orientation (OO) in general and then go into Object Oriented Ruby. When learning to code, I think it not only important but also interesting to understand how computer programming and OO came to be. I will briefly summarize what I learned about OO at Flatiron and share some resources that you can read to further your understanding. In 1969, the founder of Xerox, Joseph Wilson decided to open up a separate reaserch center in Silicon Valley called Xerox Palo Alto Reasearch Center (XPARC) because there were other huge companies there such as IBM and Intel. He hired Adele Goldberg and Alan Kay and they go on to invent the following: 
 * Object Oriented Programming 
