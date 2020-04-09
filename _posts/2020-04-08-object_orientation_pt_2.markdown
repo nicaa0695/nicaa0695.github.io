@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Object Orientation pt. 2"
+title:      "Object Oriented Ruby pt. 2"
 date:       2020-04-09 02:26:56 +0000
 permalink:  object_orientation_pt_2
 ---
