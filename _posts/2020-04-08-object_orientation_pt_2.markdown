@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Object Oriented Ruby pt. 2"
-date:       2020-04-09 02:26:56 +0000
+date:       2020-04-08 22:26:57 -0400
 permalink:  object_orientation_pt_2
 ---
 
