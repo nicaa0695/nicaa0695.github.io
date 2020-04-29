@@ -1,13 +1,13 @@
 ---
 layout: post
 title:      "Object Oriented Ruby pt. 4"
-date:       2020-04-29 21:14:54 +0000
+date:       2020-04-29 17:14:55 -0400
 permalink:  object_oriented_ruby_pt_4
 ---
 
 ![](https://cdn.iconscout.com/icon/free/png-256/ruby-45-1175100.png)
 
-Happy Wednesday everyone! Whew, these past couple of weeks have been intense. We're sort of in a pickle as far as the new house goes. We are living in it but can't unpack alot of things until the baseboards are put in. I am doing some things around the house myself. For other things, I've needed contractors which is rough because I leave the house while they work, which is usually several hours at a time, then come back and disinfect just to be safe. We had a large list of renovations and they're almost complete, thank goodess. I just want to get settled in so I can work from home more comfortably! 
+Happy Wednesday everyone! Whew, these past couple of weeks have been intense. We're sort of in a pickle as far as the new house goes. We are living in it but can't unpack alot of things until the baseboards are put in. I am doing some things around the house myself. For other things, I've needed contractors which is rough because I leave the house while they work, which is usually several hours at a time, then come back and disinfect just to be safe. We had a large list of renovations and they're almost complete, thank goodness. I just want to get settled in so I can work from home more comfortably! 
 
 ![](https://media1.tenor.com/images/c8adb965ede4d79571a565fd75d454c0/tenor.gif?itemid=5655336)
 
