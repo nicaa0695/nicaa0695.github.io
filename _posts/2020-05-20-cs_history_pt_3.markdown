@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "CS History pt. 3"
-date:       2020-05-20 19:07:39 +0000
+date:       2020-05-20 15:07:40 -0400
 permalink:  cs_history_pt_3
 ---
 
@@ -23,7 +23,11 @@ Not long after, IBM released Fortran which was the first high-level programming 
 
 **We Have It Much Easier Than Early Programmers**
 
-Eventually all of these new ideas by all of these smart people led to the hundreds of programming languages we have today, giving us a few new ones each decade. They allow us to write very high-level code and abstract away all of the things under the hood that we don't necessarily need to worry about. Now, you can whip up a basic website in an hour or build an awesome application that handles all of your real estate or stock trading needs in a week if you really needed to. What used to take years and years can now be done in seconds.
+Eventually all of these new ideas by all of these smart people led to the hundreds of programming languages we have today, giving us a few new ones each decade. 
+
+![](https://image.slidesharecdn.com/dprogramminglanguage-josa-151025113752-lva1-app6891/95/d-programming-language-6-638.jpg?cb=1445773142)
+
+They allow us to write very high-level code and abstract away all of the things under the hood that we don't necessarily need to worry about. Now, you can whip up a basic website in an hour or build an awesome application that handles all of your real estate or stock trading needs in a week if you really needed to. What used to take years and years can now be done in seconds.
 
 ![](https://meme.xyz/uploads/posts/t/l-43556-efficiency-is-just-smart-laziness.jpg)
 
