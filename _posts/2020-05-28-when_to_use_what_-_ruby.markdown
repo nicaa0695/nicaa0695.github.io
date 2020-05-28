@@ -6,7 +6,7 @@ permalink:  when_to_use_what_-_ruby
 ---
 
 
-Hey guys, I hope everyone's week is going well. Thankfully it's almost the weekend! 🙌 Some interesting things have happened this week. One of them being that someone's vehicle in my neighborhood was stolen. The driver drove through a fence and into someones backyard, hitting an electric box and causing a power outage. Here's a picture of it that was posted in the neighborhood Facebook group:
+Hey guys, I hope everyone is doing well. Thankfully it's almost the weekend! 🙌 Some interesting things have happened this week. One of them being that someone's vehicle in my neighborhood was stolen. The driver drove through a fence and into someones backyard, hitting an electric box and causing a power outage. Here's a picture of it that was posted in the neighborhood Facebook group:
 
 **Can't fix stupid**😅
 
