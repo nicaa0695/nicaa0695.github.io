@@ -77,7 +77,7 @@ Here we see that now each instance of a person can have a different names even t
 ```
 class Cat 
    def downcase_name!
-    @name.downase!
+    @name.downcase!
    end
 end
 ```
