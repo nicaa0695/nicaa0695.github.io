@@ -24,14 +24,14 @@ I'm not sure we will cover all 9 pieces in this weeks blog, let's say we will co
 
 **Some key parts in Ruby**
 1. Classes
-* Instance Variables
-* Instance Methods
-* Instantiation
-* `attr_accessor`
-* Class Variables
-* Class Constructors
-* Class Methods
-* `self`
+2. Instance Variables
+3. Instance Methods
+4. Instantiation
+5. `attr_accessor`
+6. Class Variables
+7. Class Constructors
+8. Class Methods
+9. `self`
 
 **When To Use Them**
 
