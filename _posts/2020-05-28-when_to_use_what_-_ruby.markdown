@@ -18,7 +18,7 @@ This pissed off a lot of people including myself as it took a few hours out of o
 
 Anyways, this week I've been continuing my AWS course, study study study! I'm loving the material, it's just taking me awhile to get through it. I've also applied for a few jobs and started some pretty good conversations on LinkedIn with some people in the Denver tech community that are willing to answer questions that juniors may have during their job search. Thank you to all that make this community so awesome. I've been invited to virtual meetups, been given insight on what interview processes look like at different companies, and have been building a meaningful network. It's been really cool to connect with people who are passionate about software engineering and about helping others as they were once in the shoes of a code newbie! It's also lead to a couple of intro calls with companies to see if we are a match. I knew moving to Denver would be a fantastic place to be while starting a career in software development. 
 
-![](https://www.womenyoushouldfund.com/wp-content/uploads/2017/01/wysk-socialnetwork1.png)
+![](https://westmorelandca.org/wp-content/uploads/2018/11/bnr-community-outreach-459x293.jpg)
 
 I'm not sure we will cover all 9 pieces in this weeks blog, let's say we will cover 4 now and 5 next week. For beginners, it might not be clear when to use these mechanics in Ruby. Here are a few situations where you would want to use the following:
 
