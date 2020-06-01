@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "When To Use What - Ruby pt. 2"
-date:       2020-06-01 02:03:02 +0000
+date:       2020-05-31 22:03:03 -0400
 permalink:  when_to_use_what_-_ruby_pt_2
 ---
 
 
 Hey guys! Hopefully everyone had a nice weekend. I know I did, and now I'm excited to go camping here in Colorado. We get to stay for three nights, I'm looking forward to a few days in nature away from phones, laptops, social media and more bad news. 2020 has been pretty sad... Sometime's you just need to get away. 🌲☀️⛺️🏔 
 
-![](https://lh3.googleusercontent.com/proxy/eh1uPQ4kpL4n1I118apq3iUhC224Y1JXqUobPXX9pCXbC5phzek6TH7P_wPcyoGieiR-W3nhXhiwl8V_AN7I6ytWFm_mixfLCg38a9JgOKjCqp0a4AobA7aRaWQzHtfGyjeYH0GuA1AtRWGituP0ThpCjqPne4Lnf9rnqw)
+![](https://www.visitflorida.com/content/dam/visitflorida/en-us/images/full-rights/PHOTO%20ICON%20CAMPING%20FISHEATING%20CREEK%20%28Peter%20W.%20Cross%20and%20Patrick%20Farrell%29.jpg.1280.500.imagerendition)
 
 But, before I go, I wanted to finish up what we started last week. We talked about how for beginners and even for some more expereinced developers, it might be hard to determine when and where to use these Ruby mechanics. We had a list of 9 and we covered 1-4, today I want to cover 5-9. 
 
@@ -88,7 +88,6 @@ I hope this was helpful. Again, hammering these situations into my head has help
 Peace,
 
 Nica 
-
 
 
 
