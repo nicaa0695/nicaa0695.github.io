@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Ruby Scope"
-date:       2020-06-11 21:36:52 +0000
+date:       2020-06-11 17:36:53 -0400
 permalink:  ruby_scope
 ---
 
@@ -11,7 +11,7 @@ Hi everyone! Let me just start by saying if you haven't gone on a camping trip r
 
 **Variables**
 
-If you've read my previos blog posts, you know that different types of variabes are written as follows:
+If you've read my previous blog posts, you know that different types of variabes are written as follows:
 
 1. Local Variable - `variable`
 2. Instance Variable - `@variable`
