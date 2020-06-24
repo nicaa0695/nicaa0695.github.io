@@ -1,0 +1,64 @@
+---
+layout: post
+title:      "IG Clone Pt. 2"
+date:       2020-06-24 23:14:59 +0000
+permalink:  ig_clone_pt_2
+---
+
+
+And we are back with part 2! I hope everyone's week has been nice and productive so far. I've had so much to juggle this week but surprisingly I'm keeping up! Going into the next interview like: 
+
+![](https://blog.funeralone.com/wp-content/uploads/2019/08/image.png)
+
+😇🤣
+
+Enough with the jokes, guys. 
+
+**Which database to choose?**
+
+I decided to use SQLite because its already set up for us. It's a powerful, embedded relational database management system and it's good for testing and developing. You can, however, choose a different option such as PostgrSQL or MySQL. If I were planning on deploying this site and having lots of users I would probably choose postgreSQL. But since I'm just doing this side project for practice, I'll stick with SQLite.
+
+**Setting Up Bootstrap and Devise**
+
+In my Gemfile, I added `gem 'bootstrap-sass', '~> 3.4.1'` for styling and `gem 'devise'` for user authentication. 
+The Devise gem is great because it does all the work of allowing new users to sign-up, sign-in, logout, reset passwords and so on. Bootstrap is fantastic because it make styling your app so much faster and easier! 
+After adding these to my Gemfile, I ran `bundle install` in my terminal which gives us the newest versions of the gems we've added.
+
+Next I ran `rails generate devise:install` to create the configuration file. Then, following the [Devise gem README.md](https://github.com/heartcombo/devise), I added `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }` to config/environments/development.rb which sets a default URL within our emails for actionmailer. 
+
+**Setting Up Default Route**
+
+In config/routes.rb I added `root to: "public#homepage"` which will be the first page you see when you visit http://localhost:3000/
+
+Then, I ran `rails g devise:views` which creates all my devise view files for later customization.
+
+Next, I ran `rails generate devise Account`. This created a database migration and the necessary fields for the database table. I setup my database with `rails db:setup` and migrated it using `rails db:migrate`
+
+**Our First View**
+
+I ran `rails g controller public` which created app/contollers/public_controller.rb where I can add the first method: 
+```
+def homepage
+end
+```
+
+Then, I added a view file called homepage.html.erb in app/views/public where I inserted some dummy text for now, just to make sure my app was working properly. In app/views/public/homepage.html.erb:
+
+`<h1 class="mt-5">Welcome to IG Clone</h1>` 
+
+Now when I visit http://localhost:3000/ I see "Welcome to IG Clone". Beautiful! 😁
+
+**A Little More Bootstrap Setup**
+
+I went to [Bootstrap](https://startbootstrap.com/templates/bare/) and clicked 'Free Download'. Then, I followed the instructions [here](https://github.com/StartBootstrap/startbootstrap-bare) to finish setup. I know, lots of tedious steps. 🥱 But now we won't have to write out a bunch of CSS. 😁👍 It should look something like this: 
+
+![](https://startbootstrap.com/assets/img/screenshots/templates/bare.png)
+
+I'm going to work on this some more as well as a few other tasks I have for this week. I may go into part 3 next week or I may choose another topic people typically struggle with. We will see. 🤷‍See you guys soon! 
+
+Peace,
+
+Nica
+
+
+
