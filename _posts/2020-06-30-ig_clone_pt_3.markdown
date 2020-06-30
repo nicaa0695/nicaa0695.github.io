@@ -1,0 +1,94 @@
+---
+layout: post
+title:      "IG Clone pt. 3 "
+date:       2020-06-30 21:57:55 +0000
+permalink:  ig_clone_pt_3
+---
+
+
+Hello everyone! In the last couple of posts we've gone through the steps for setting up our Instagram clone. You can find them here: [Part 1](https://nicaa0695.github.io/ig_clone_in_ruby_on_rails) and [Part 2](https://nicaa0695.github.io/ig_clone_pt_2). I've been working on the app more and it is starting to look pretty good! Today, I will go over what I've added. 
+
+![](https://pics.me.me/that-moment-when-your-code-works-best-moment-36108992.png)
+
+We left off last time with some more Bootstrap setup to help us create or site faster and easier. Next, on the homepage, I added links to either sign up or log in. In app/views/public/homepage.html.erb: 
+```
+<p class="lead">Please register or sign-in to continue.</p>
+
+<%= link_to "Sign Up", new_account_registration_path, class: "btn btn-success"%>
+<%= link_to "Sign In", new_account_session_path, class: "btn btn-secondary"%>
+```
+
+If you're not sure which routes you have availabe within your application, you can type `rake routes` in your terminal. Note: Above, the `class: "btn btn-success"` is some basic styling available to us from the Bootstrap template that creates a 'Sign Up' button.
+
+Next, I clicked the Sign Up button and made a test account to make sure my Devise setup was working correctly:
+
+email: test@test.com
+password: testing1
+
+After that, I loked at the Rails server logs and I could see the account was created and inserted into the Accounts table! 😎👍 Next, I created a view for the dashboard. I made an `accounts_controller` by running `rails g controller Accounts` in my terminal, then, in the config/routes.rb file I added a route `get "/dashboard" => "accounts#index"` that will point to the index method in the accounts controller. My routes file now looks like this: 
+```
+Rails.application.routes.draw do
+  devise_for :accounts
+
+  #dashboard
+  get "/dashboard" => "accounts#index"
+
+  root to: "public#homepage"
+end
+```
+
+And my accounts controller looks like this: 
+
+```
+class AccountsController < ApplicationController
+    before_action :authenticate_account! 👈 # ensures that only users who have an account and are logged in can access the dashboard.
+
+    def index 
+        # user feed
+    end
+
+    def show 
+        # user profile
+    end
+end
+```
+
+Next I added the index template. In app/views/accounts, I added a file: index.html.erb. 
+
+Next, we need our accounts to have posts! Lets create a migration for posts by running `rails g migration create_posts` which creates this file for us where we can add some additional attributes: 
+
+db/migrate/20200624193354_create_posts.rb
+```
+class CreatePosts < ActiveRecord::Migration[6.0]
+  def change
+    create_table :posts do |t|
+	 t.string :image
+      t.boolean :active
+      t.references :account
+      t.timestamps
+		end
+  end
+end
+```
+
+Once the attributes are added, we can run `rails db:migrate` to create the posts table. Then create a model by running `rails g model Post --skip` Take a look at the schema file and you can see all this has been added to it. 
+
+```
+create_table "posts", force: :cascade do |t|
+    t.string "image"
+    t.boolean "active"
+    t.integer "account_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_posts_on_account_id"
+  end
+```
+
+Fantastic! 
+
+I will be back next week with more on what I've added, hopefully we can focus less on setup and more on the fun stuff. I hope everyone has a wonderful week. Stay safe.
+
+Peace, 
+
+Nica
+
