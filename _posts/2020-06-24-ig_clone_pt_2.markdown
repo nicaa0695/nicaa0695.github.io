@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "IG Clone Pt. 2"
-date:       2020-06-24 23:14:59 +0000
+date:       2020-06-24 19:15:00 -0400
 permalink:  ig_clone_pt_2
 ---
 
@@ -21,7 +21,7 @@ I decided to use SQLite because its already set up for us. It's a powerful, embe
 **Setting Up Bootstrap and Devise**
 
 In my Gemfile, I added `gem 'bootstrap-sass', '~> 3.4.1'` for styling and `gem 'devise'` for user authentication. 
-The Devise gem is great because it does all the work of allowing new users to sign-up, sign-in, logout, reset passwords and so on. Bootstrap is fantastic because it make styling your app so much faster and easier! 
+The Devise gem is great because it does all the work of allowing new users to sign-up, sign-in, logout, reset passwords and so on. Bootstrap is fantastic because it makes styling your app so much faster and easier! 
 After adding these to my Gemfile, I ran `bundle install` in my terminal which gives us the newest versions of the gems we've added.
 
 Next I ran `rails generate devise:install` to create the configuration file. Then, following the [Devise gem README.md](https://github.com/heartcombo/devise), I added `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }` to config/environments/development.rb which sets a default URL within our emails for actionmailer. 
