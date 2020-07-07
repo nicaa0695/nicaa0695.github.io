@@ -1,0 +1,107 @@
+---
+layout: post
+title:      "IG Clone pt. 4"
+date:       2020-07-07 19:42:37 +0000
+permalink:  ig_clone_pt_4
+---
+
+![](https://www.icpertiniguanella.edu.it/pdg/wp-content/uploads/bogliolo_coding_testatina-1080x380.png)
+
+Hi guys! I'm back with part 4 of our Instagram clone. Here are parts [1](https://nicaa0695.github.io/ig_clone_in_ruby_on_rails), [2](https://nicaa0695.github.io/ig_clone_pt_2), and [3](https://nicaa0695.github.io/ig_clone_pt_3). So far we have completed the following: 
+
+* Set up our database 
+* Set up Devise for user authentication 
+* Set up Bootstrap for quick and easy styling
+* Set up options for users to sign up and sign in
+* Created a Posts table so users can start adding photos 
+* Added methods in our controllers and created models
+
+Since we've created our Posts table, we need a way for users to upload their pictures to the app. I am going to use Amazon S3 servers and the Carrierwave, Fog, Mini Magick, and Figaro gems by adding them to my Gemfile: 
+```
+#image uploads to Amazon s3
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog', '~> 2.2'
+
+#image resizing
+gem 'mini_magick'
+
+ # local ENV vars
+  gem "figaro"
+```
+
+Then, run `bundle install` in my terminal to install these gems. Now we need to generate an uploader file by running `rails g uploader Image` which will create a file for us in app/uploaders/image_uploader.rb. Here is where we want to use Fog for storage. The file should now look like this:
+
+```
+Class ImageUploader < CarrierWave::Uploader::Base
+  # Choose what kind of storage to use for this uploader:
+  storage :fog
+	
+ def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+end
+```
+
+In config/initializers, create a file called carrierwave.rb to set the correct environment varibles for Amazon S3.You can copy and paste the following code into that file or find it on the [Carrierwave documentation page](https://github.com/carrierwaveuploader/carrierwave):
+
+```
+CarrierWave.configure do |config|
+     config.fog_credentials = {
+       provider:              'AWS',                        
+       aws_access_key_id:     ENV['AWS_ACCESS_KEY_ID'],                        
+       aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],                         
+     }
+     config.storage = :fog
+     config.permissions = 0666
+     config.cache_dir = "#{Rails.root}/tmp/"
+     config.fog_directory  = ENV['FOG_DIRECTORY']         
+     config.fog_attributes = { 'Cache_control' => "max-age=#{365.days.to_i}" }
+end
+```
+
+Create a file in config called application.yml. In this file, replace the values with your own S3 credentials:
+```
+AWS_ACCESS_KEY_ID: 5678      👈 
+AWS_SECRET_ACCESS_KEY: 5678  👈 EXAMPLES 
+FOG_DIRECTORY: 5678          👈 
+```
+
+**NOTE:** Do not push the application.yml file up to your git repository because it contains your S3 access keys that you don't want to share publically. 
+
+Now, lets connect our model to the uploader file in post.rb: 
+
+```
+class Post < ApplicationRecord
+    mount_uploaders :image, ImageUploader
+end
+```
+
+In app/controllers create a file called posts_controller.rb to input a show method and strong params which you can read about [here](https://api.rubyonrails.org/classes/ActionController/StrongParameters.html) if you dont know what that is. Our file should look like this: 
+```
+class PostsController < ApplicationController
+
+   def show
+   end
+	 
+   def new
+   end
+	 
+   def create
+   end
+	 
+   private
+	 
+	 def post_params
+	    params.require(:post).permit(:image)
+	 end
+	 
+end
+```
+
+I think we will end here today but I will be back next week with part 5. Have a great week everyone! ✌️
+
+Peace,
+
+Nica
+
+
