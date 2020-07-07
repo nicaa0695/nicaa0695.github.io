@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "IG Clone pt. 3 "
-date:       2020-06-30 21:57:55 +0000
+date:       2020-06-30 17:57:56 -0400
 permalink:  ig_clone_pt_3
 ---
 
@@ -10,7 +10,7 @@ Hello everyone! In the last couple of posts we've gone through the steps for set
 
 ![](https://pics.me.me/that-moment-when-your-code-works-best-moment-36108992.png)
 
-We left off last time with some more Bootstrap setup to help us create or site faster and easier. Next, on the homepage, I added links to either sign up or log in. In app/views/public/homepage.html.erb: 
+We left off last time with some more Bootstrap setup to help us create our site faster and easier. Next, on the homepage, I added links to either sign up or log in. In app/views/public/homepage.html.erb: 
 ```
 <p class="lead">Please register or sign-in to continue.</p>
 
@@ -18,14 +18,14 @@ We left off last time with some more Bootstrap setup to help us create or site f
 <%= link_to "Sign In", new_account_session_path, class: "btn btn-secondary"%>
 ```
 
-If you're not sure which routes you have availabe within your application, you can type `rake routes` in your terminal. Note: Above, the `class: "btn btn-success"` is some basic styling available to us from the Bootstrap template that creates a 'Sign Up' button.
+If you're not sure which routes you have available within your application, you can type `rake routes` in your terminal. Note: Above, the `class: "btn btn-success"` is some basic styling available to us from the Bootstrap template that creates a 'Sign Up' button.
 
 Next, I clicked the Sign Up button and made a test account to make sure my Devise setup was working correctly:
 
 email: test@test.com
 password: testing1
 
-After that, I loked at the Rails server logs and I could see the account was created and inserted into the Accounts table! 😎👍 Next, I created a view for the dashboard. I made an `accounts_controller` by running `rails g controller Accounts` in my terminal, then, in the config/routes.rb file I added a route `get "/dashboard" => "accounts#index"` that will point to the index method in the accounts controller. My routes file now looks like this: 
+After that, I looked at the Rails server logs and I could see the account was created and inserted into the Accounts table! 😎👍 Next, I created a view for the dashboard. I made an `accounts_controller` by running `rails g controller Accounts` in my terminal, then, in the config/routes.rb file I added a route `get "/dashboard" => "accounts#index"` that will point to the index method in the accounts controller. My routes file now looks like this: 
 ```
 Rails.application.routes.draw do
   devise_for :accounts
