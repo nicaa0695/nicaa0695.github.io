@@ -1,0 +1,90 @@
+---
+layout: post
+title:      "IG Clone pt. 5"
+date:       2020-07-16 00:24:41 +0000
+permalink:  ig_clone_pt_5
+---
+
+
+Hey everyone! I’m back with part 5 of our Instagram clone. Here are parts [1](https://nicaa0695.github.io/ig_clone_in_ruby_on_rails), [2](https://nicaa0695.github.io/ig_clone_pt_2), [3](https://nicaa0695.github.io/ig_clone_pt_3), and [4](https://nicaa0695.github.io/ig_clone_pt_4). In part 4, we completed the following: 
+
+* Added the Carrierwave and Fog gems to allow users to upload images 
+* Used AWS S3 to store user uploads (created an AWS S3 account and added our own credentials to our application.yml file)
+* Connected our model to our uploader file
+* Created a posts_controller with necessary methods
+
+Since we've created our posts_controller, we now want to set up our views. I made a new view file in views/posts called new.html.erb where I rendered a partial. Partials are a way of breaking the rendering process into more manageable pieces and allow you to extract pieces of code from your templates to separate files and also reuse them throughout your templates. Our views/posts/new.html.erb file should look like this: 
+
+```
+<h2>New Post</h2>
+
+<%= render "form" %>
+```
+
+Now we need to create a new file to actually render our partial. Let's call it `_form.html.erb`. Partials always begin with an underscore. In `views/posts/_form.html.erb`, we need towrite some code that allows a user to create a new post by letting the choose a file(photo) from their computer:
+
+```
+<%= form_for @post, html: { multipart: true } do |f| %>
+    <%= f.file_field :image, class: "form-control" %>
+    <%= f.hidden_field :image_cache %>
+
+    <%= f.submit "Save Post", class: "btn btn-success" %>
+
+<% end %>
+```
+
+In our posts_controller, we want to make sure that when a user creates a post, it is simultaneously saved to the database. We can do that by modifying our create method like so: 
+```
+  def create
+        @post = Post.new(post_params)
+        @post.account_id = current_account.id if account_signed_in?
+        
+        if @post.save
+            redirect_to dashboard_path, flash: { success: "Post was created successfully!" }
+        else
+            redirect_to new_post_path, flash: { danger: "Post was not saved!" }
+       end
+  end
+```
+ 
+If it is saved, the user will be redirected to the dashboard and if there is an issue saving it, the use will be redirected back to the "Create a New Post" page. Next, we need to add the ability for saved posts to actually show up on the user's feed!  In our accounts_controller in the index method, let's create an instance variable and load in our posts:
+
+```
+def index 
+   # user dashboard - post feed
+   @posts = Post.active
+end
+```
+
+And let's set a scope on our posts model to ensure that only active posts are selected! In models/post.rb, our scope should look as follows:
+
+`scope :active, -> { where active: true }`
+
+Scopes are custom queries that you define inside models with the `scope` method. You can learn more about them [here](https://apidock.com/rails/ActiveRecord/NamedScope/ClassMethods/scope)!
+
+Next, in views/accounts/index.html.erb, we want to display the posts we have created; it's no fun if your pictures aren't actually visible! 😜 It should now look like this: 
+
+```
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <% @posts.each do |post| %>
+                <%= image_tag post.image.url, class: "img img-fluid" %>
+            <% end %>
+        </div>
+    </div>
+</div>
+```
+
+All the `div's` here are just styling we get from Bootstrap. The most important pieces here are the ERB(Embedded Ruby) tags (`<%=`). 
+
+At first, using Bootstrap can be intimidating because the [documentation page](https://getbootstrap.com/docs/3.4/css/) is GIGANTIC! But once you start using it frequently and getting the hang of it, it's a lot of fun and actually makes styling easier in my opinion. I'm going to add some minor styling just to get my site to look how I want it too and I will be back with more on our IG Clone next week! 
+
+Code, code, code!
+
+![](https://media.giphy.com/media/13GIgrGdslD9oQ/giphy.gif)
+
+Peace,
+
+Nica ✌️
+
