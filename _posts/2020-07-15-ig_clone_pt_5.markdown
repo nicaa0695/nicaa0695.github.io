@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "IG Clone pt. 5"
-date:       2020-07-16 00:24:41 +0000
+date:       2020-07-15 20:24:42 -0400
 permalink:  ig_clone_pt_5
 ---
 
@@ -78,7 +78,7 @@ Next, in views/accounts/index.html.erb, we want to display the posts we have cre
 
 All the `div's` here are just styling we get from Bootstrap. The most important pieces here are the ERB(Embedded Ruby) tags (`<%=`). 
 
-At first, using Bootstrap can be intimidating because the [documentation page](https://getbootstrap.com/docs/3.4/css/) is GIGANTIC! But once you start using it frequently and getting the hang of it, it's a lot of fun and actually makes styling easier in my opinion. I'm going to add some minor styling just to get my site to look how I want it too and I will be back with more on our IG Clone next week! 
+At first, using Bootstrap can be intimidating because the [documentation page](https://getbootstrap.com/docs/3.4/css/) is GIGANTIC! But once you start using it frequently and getting the hang of it, it's a lot of fun and actually makes styling easier in my opinion. I'm going to add some minor styling just to get my site to look how I want it to and I will be back with more on our IG Clone next week! 
 
 Code, code, code!
 
