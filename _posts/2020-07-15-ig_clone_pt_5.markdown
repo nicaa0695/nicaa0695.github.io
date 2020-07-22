@@ -21,7 +21,7 @@ Since we've created our posts_controller, we now want to set up our views. I mad
 <%= render "form" %>
 ```
 
-Now we need to create a new file to actually render our partial. Let's call it `_form.html.erb`. Partials always begin with an underscore. In `views/posts/_form.html.erb`, we need towrite some code that allows a user to create a new post by letting the choose a file(photo) from their computer:
+Now we need to create a new file to actually render our partial. Let's call it `_form.html.erb`. Partials always begin with an underscore. In `views/posts/_form.html.erb`, we need to write some code that allows a user to create a new post by letting them choose a file(photo) from their computer:
 
 ```
 <%= form_for @post, html: { multipart: true } do |f| %>
