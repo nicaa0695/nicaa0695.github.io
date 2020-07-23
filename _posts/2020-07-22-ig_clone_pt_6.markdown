@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "IG Clone pt. 6 "
-date:       2020-07-23 00:20:30 +0000
+date:       2020-07-22 20:20:30 -0400
 permalink:  ig_clone_pt_6
 ---
 
@@ -18,7 +18,7 @@ I’m back with part 6 of our Instagram clone. Here are parts [1](https://nicaa0
 * Actually displaying the posts that users have created onto the feed.
 * Used Bootstrap for styling.
 
-If you're following along, I hope your having fun building our own version of Instagram. Most things are similar to the actual IG app but we get to implement our own features and style. It has certainly been fun for me because I've learned a lot not just from coding but from writing blog posts every week!
+If you are following along, I hope you're having fun building our own version of Instagram. Most things are similar to the actual IG app but we get to implement our own features and style. It has certainly been fun for me because I've learned a lot not just from coding but from writing blog posts every week!
 
 ![](https://i0.wp.com/munofore.com/wp-content/uploads/2015/10/blogging-cat.jpg?fit=705%2C469&ssl=1)
 
