@@ -1,0 +1,89 @@
+---
+layout: post
+title:      "IG Clone pt. 6 "
+date:       2020-07-23 00:20:30 +0000
+permalink:  ig_clone_pt_6
+---
+
+
+Hello, everyone! Or as I like to say...
+
+![](https://media.tenor.com/images/4f01ed26d65287f45d8ee48c9317d34a/raw)
+
+I’m back with part 6 of our Instagram clone. Here are parts [1](https://nicaa0695.github.io/ig_clone_in_ruby_on_rails), [2](https://nicaa0695.github.io/ig_clone_pt_2), [3](https://nicaa0695.github.io/ig_clone_pt_3),  [4](https://nicaa0695.github.io/ig_clone_pt_4), and [5](https://nicaa0695.github.io/ig_clone_pt_5). In part 5, we added the following: 
+
+* Ability for a user to create a new post by letting them choose a file(photo) from their computer.
+* Making sure that when a user creates a post, it is simultaneously saved to the database.
+* Set a scope on our posts model to ensure that only active posts are selected.
+* Actually displaying the posts that users have created onto the feed.
+* Used Bootstrap for styling.
+
+If you're following along, I hope your having fun building our own version of Instagram. Most things are similar to the actual IG app but we get to implement our own features and style. It has certainly been fun for me because I've learned a lot not just from coding but from writing blog posts every week!
+
+![](https://i0.wp.com/munofore.com/wp-content/uploads/2015/10/blogging-cat.jpg?fit=705%2C469&ssl=1)
+
+ Then, reality hits. 
+ 
+ ![](https://i2.wp.com/munofore.com/wp-content/uploads/2015/10/blogging-comment.jpg?resize=561%2C399)
+ 
+ 🤣🤣🤣 Just kidding, guys! I've actually been getting some comments and likes on my blog, so thank you! 😁 However, let's jump in. What I want to do is when a user posts a picture, have their username displayed above it. We don't currently have 'username' within our schema but we can add it by running this command in the terminal:
+ 
+ `rails g migration add_username_to_accounts`
+ 
+ This will create a file in our 'migrate' folder where we can add fields for `username`, `first_name`, and `last_name`. The folder should now look like this: 
+ 
+ ```
+class AddUsernameToAccounts < ActiveRecord::Migration[6.0]
+  def change
+    add_column :accounts, :first_name, :string, limit: 20
+    add_column :accounts, :last_name, :string, limit: 20
+    add_column :accounts, :username, :string, limit: 20
+  end
+end
+ ```
+ 
+ Then, we need to run a migration on our database that will incorporate these new fields. In the terminal, run:
+ 
+ `rails db:migrate`
+ 
+ Now, we need to add the username, first_name and last_name fields onto the sign-in page. To do this, I added the following to views/devise/registrations/new.html.erb as well as views/devise/registrations/edit.html.erb:
+ 
+```
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+ ```
+ 
+ Finally, we want to permit these additional parameters by using a simple before action in our `ApplicationController`:
+ 
+ ```
+ class ApplicationController < ActionController::Base
+    before_action :configure_permitted_parameters, if: :devise_controller?
+
+    protected
+
+    def configure_permitted_parameters
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :first_name, :last_name, :email, :password])
+    end
+end
+ ```
+ 
+ Next I'm going to play around with Bootstrap and see if I can make this site look the way I want to and you can do the same. But we will go over more of the functionality next week in part 7! 🤗
+ 
+ Peace,
+ 
+ Nica✌️
+ 
+
+
